@@ -1,0 +1,313 @@
+/* styles.css */
+
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust the height based on your design */
+    width: auto;  /* Mai ntain the aspect ratio */
+}
+
+.logo span {
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #333;
+    font-size: 1.1rem;
+    transform: translateY(5px);
+}
+
+.header-icons {
+    display: flex;
+    gap: 1rem; /* Space between icons */
+    align-items: center; /* Vertically align icons */
+}
+
+.header-icons a {
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Smooth transition for the size change */
+}
+.header-icons a:hover {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+.header-icons img {
+    
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    cursor: pointer;
+    background: transparent; /* Ensures no background */
+}
+
+.cart-count {
+    background-color: #ff6363;
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -5px; /* Adjust position */
+    right: -10px; /* Adjust position */
+}
+
+
+/* Hero Section Styles */
+.hero, .banner-2 {
+    background-size: cover; /* Ensures image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    height: 100vh; /* Set to full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-end; /* Align content to the right */
+}
+
+/* Specific styling for hero and banner images */
+.hero {
+    background-image: url('img1.webp'); /* Replace with your image path */
+}
+
+.banner-2 {
+    background-image: url('banner_1.webp'); /* Replace with your image path */
+}
+
+/* Adjusting Hero Content Position */
+.hero-content {
+    text-align: center; /* Center text within the content area */
+    color: #fff; /* Text color */
+    padding: 2rem; /* Padding around the content */
+    margin-right: 100px; /* Add some margin to the right */
+    line-height: 30px;
+}
+.hero p{
+    padding: 10px 0 20px 0;
+}
+
+/* Hero Button Styling */
+.hero button, .banner-2 button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero button:hover, .banner-2 button:hover {
+    background-color: #ffffff;
+    transform: translateY(-7px);
+    color: black;
+}
+
+
+/* WhatsApp Icon Styles */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.whatsapp-icon img:hover {
+    width: 60px;
+    height: 60px;
+}
+
+
+/* DISCOVER ITEMS SECTION  */
+.men-products{
+    text-align: center;
+    margin: 50px 50px;
+}
+.discover-items a{
+    text-decoration: none;
+    color: black;
+}
+.discover-link1:hover{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.discover-link2:hover{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Product Slider Section Styles */
+.product-slider-section {
+    padding: 2rem;
+    background-color: #f8f8f8; /* Light background color */
+    overflow: hidden; /* Hide the overflow */
+}
+
+.category-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Product Slider Section Styles */
+.product-slider-section {
+    padding: 2rem;
+    background-color: #f8f8f8; /* Light background color */
+    overflow: hidden; /* Hide the overflow */
+}
+
+.category-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Product Slider Container Styles */
+.product-slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto; 
+}
+
+.product-slider {
+    display: flex;
+    gap: 1rem; /* Space between products */
+    scroll-snap-type: x mandatory; /* Snap to each product on scroll */
+}
+
+.product-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.product-slider {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Product Display Section Styles */
+.product-display-section {
+    padding: 2rem;
+    background-color: #f8f8f8; /* Light background color */
+}
+
+.category-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    justify-content: space-between; /* Space between products */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    gap: 1rem; /* Space between products */
+    max-width: 1200px; /* Maximum width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Product Card Styles */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    width: calc(25% - 1rem); /* 4 products in a row, considering the gap */
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Lift up effect on hover */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.shop-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.shop-button:hover {
+    background-color: #444; /* Darker shade on hover */
+}
