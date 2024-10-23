@@ -36,8 +36,8 @@ header {
 }
 
 .logo img {
-    height: 40px; /* Adjust the height based on your design */
-    width: auto;  /* Mai ntain the aspect ratio */
+    height: 40px; 
+    width: auto;  
 }
 
 .logo span {
@@ -117,6 +117,10 @@ nav ul li a:hover {
 
 .banner-2 {
     background-image: url('banner_1.webp'); /* Replace with your image path */
+}
+
+.for-her{
+    background-image: url('DSC00536-01-01_70c7c8c8-bd35-40d5-8923-f1d714c421af\ \(1\).webp'); /* Replace with your image path */
 }
 
 /* Adjusting Hero Content Position */
@@ -200,7 +204,7 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Product Slider Section Styles */
+/* Product Section Styles */
 .product-slider-section {
     padding: 2rem;
     background-color: #f8f8f8; /* Light background color */
@@ -214,34 +218,11 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Product Slider Container Styles */
-.product-slider-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80vw;
-    margin: 0 auto; 
-}
-
-.product-slider {
-    display: flex;
-    gap: 1rem; /* Space between products */
-    scroll-snap-type: x mandatory; /* Snap to each product on scroll */
-}
-
-.product-slider::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-.product-slider {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
+/* Product Container Styles */
 /* Product Display Section Styles */
 .product-display-section {
     padding: 2rem;
-    background-color: #f8f8f8; /* Light background color */
+    background-color: #f8f8f8; 
 }
 
 .category-heading {
@@ -254,11 +235,11 @@ nav ul li a:hover {
 /* Product Grid Styles */
 .product-grid {
     display: flex;
-    justify-content: space-between; /* Space between products */
-    flex-wrap: wrap; /* Allows wrapping if needed */
-    gap: 1rem; /* Space between products */
-    max-width: 1200px; /* Maximum width of the grid */
-    margin: 0 auto; /* Center the grid */
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 1rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 /* Product Card Styles */
@@ -269,9 +250,9 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 1rem;
-    width: calc(25% - 1rem); /* 4 products in a row, considering the gap */
+    width: calc(25% - 1rem); 
     box-sizing: border-box;
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+   ; 
 }
 
 .product:hover {
@@ -311,3 +292,218 @@ nav ul li a:hover {
 .shop-button:hover {
     background-color: #444; /* Darker shade on hover */
 }
+
+
+.product-display{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+
+.breathe-luxury {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px; 
+    gap: 20px; 
+}
+
+.breathe-luxury .our-story img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    transition: 1s ease;
+}
+
+.breathe-luxury .our-story img:hover {
+    max-width: 105%; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+.breathe-luxury .text {
+    text-align: left;
+    max-width: 50%; 
+    margin-left: 30px ;
+}
+
+.breathe-luxury .text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 25px; 
+}
+
+.breathe-luxury .text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.breathe-luxury .discover-button {
+    
+    margin-top: 20px;
+    padding: 13px 26px;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.breathe-luxury .discover-button:hover {
+    background-color: #555; 
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    row-gap: 50px;
+}
+
+.icon {
+    text-align: center;
+    padding: 10px;
+}
+
+.imgs {
+    width: 100%;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.services{
+    align-items: center;
+    text-align: center;
+}
+
+.services h1{
+   margin-top: 20px;
+   margin-bottom: 50px;
+}
+.services h3{
+    font-weight: 100;
+ }
+
+ footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-section {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    
+}
+ul li {
+    font-weight: 10;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section {
+    text-align: left;
+    margin: 0 20px;
+}
+
+.fa {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.address{
+    margin-top: 50px;
+}
+
+
+
+.site-footer {
+    background-color: #ffffff;
+    color: #1e1e1e;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 10px; /* Space between sections */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Text on the left, logos on the right */
+    width: 100%; /* Full width */
+    align-items: center;
+}
+
+.footer-info {
+    margin-right: auto; /* Moves text to the left */
+}
+
+.payment-logos {
+    margin-left: auto; /* Moves logos to the right */
+}
+
+.payment-logos img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Center the language options below text and logos */
+.language-options {
+    display: flex;
+    justify-content: center; /* Centers the select elements */
+    margin-top: 20px; /* Adds space between the text/logos and the dropdowns */
+}
+
+.language-options select {
+    padding: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    margin: 0 10px; /* Adds space between the select elements */
+}
+
+
+
