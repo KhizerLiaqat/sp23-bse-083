@@ -45,31 +45,31 @@
 
 
 .site-footer {
-    padding: 20px; /* Added padding for better spacing */
+    padding: 20px; 
 }
 
 .language-options {
     display: flex;
-    gap: 10px; /* Space between select elements */
+    gap: 10px; 
 }
 
 .language-options select {
     border: none;
-    background-color: #555; /* Dark background for selects */
-    color: #fff; /* Light text color for selects */
+    background-color: #555; 
+    color: #fff; 
 }
 
 /* Styles for payment logos */
 .payment-logos img.payment-logo {
-    height: 30px; /* Set a fixed height for logos */
-    width: auto; /* Maintain aspect ratio */
-    margin: 0 5px; /* Optional spacing between logos */
+    height: 30px; 
+    width: auto; 
+    margin: 0 5px; 
 }
 
 .footer-info p {
-    margin-bottom: 10px; /* Spacing below copyright text */
+    margin-bottom: 10px; 
 }
 
 .footer-info .language-options {
-    margin-top: 10px; /* Adds space above language options */
+    margin-top: 10px; 
 }
