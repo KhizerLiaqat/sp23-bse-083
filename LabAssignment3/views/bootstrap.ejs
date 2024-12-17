@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspire Furnitures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .carousel-item img {
+            height: 300px; /* Adjusted height */
+            object-fit: cover;
+        }
+
+        .about img {
+            width: 100%;
+            height: 500px;
+        }
+
+        .circle-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .animate-btn {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* New background color for subscription section */
+        .subscribe-section {
+            background-color: #e3f2fd; /* Light blue color */
+        }
+
+        /* New background color for contact section */
+        .contact-section {
+            background-color: #f0e68c; /* Light yellow color */
+            position: relative; /* To position the badge */
+            padding-top: 20px; /* Extra padding for the badge */
+            border: 2px solid #ccc; /* Border for contact section */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Padding inside the section */
+        }
+
+        .inbox-badge {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10; /* Ensure it's above other content */
+            font-size: 1.5rem; /* Increased size */
+            padding: 10px 15px; /* Extra padding */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="bg-dark text-white py-3 text-center">
+        <p class="mb-0">Free Delivery. Get 10% off on Bank Transfer. <a href="#" class="text-white">Shop Now</a></p>
+    </div>
+
+    <!-- Header -->
+<header class="bg-white border-bottom">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="the_note_logo-01_1_847c8545-209c-42e4-a465-72cba0ea58a0_180x.avif" alt="The Note Logo" class="img-fluid" style="height: 40px;">
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">Collection</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Header Icons -->
+        <div class="header-icons d-flex align-items-center gap-3">
+            <!-- Search Icon -->
+            <a href="#">
+                <img src="magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg" alt="Search Icon" class="img-fluid" style="width: 24px; height: 24px;">
+            </a>
+
+            <!-- User Icon -->
+            <a href="#">
+                <img src="download.png" alt="User Icon" class="img-fluid" style="width: 24px; height: 24px;">
+            </a>
+
+            <!-- Cart Icon -->
+            <a href="#" class="position-relative">
+                <img src="shopping-bag-line-icon-isolated-on-white-background-eps10-free-vector.jpg" alt="Cart Icon" class="img-fluid" style="width: 24px; height: 24px;">
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- WhatsApp Icon -->
+<div class="whatsapp-icon position-fixed bottom-0 end-0 p-3">
+    <a href="#">
+        <img src="whatsapp.jpg" alt="WhatsApp Icon" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+    </a>
+</div>
+
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center justify-content-end text-end bg-cover bg-center" style="background-image: url('img1.webp'); height: 100vh;">
+    <div class="hero-content text-white me-5">
+        <h2 class="display-4 fw-bold">INTENSO</h2>
+        <p class="lead">A bold symphony of depth and allure,<br> captivating with its rich essence</p>
+        <a href="#" class="btn btn-light btn-lg">SHOP NOW</a>
+    </div>
+</section>
+
+
+    <!-- DISCOVER ITEMS SECTION -->
+<div class="men-products text-center my-5">
+    <h2>DISCOVER OUR NEWEST <br>CREATIONS</h2>
+    <div class="discover-items mt-3">
+        <a href="#" class="discover-link1 text-dark">For HIM</a>
+        <span class="separator mx-2">/</span>
+        <a href="#" class="discover-link2 text-dark">For HER</a>
+    </div>
+</div>
+
+<!-- Product Display Section -->
+<section class="product-display-section py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="product text-center">
+                    <img src="dusk-02-02.webp" alt="Dusk" class="img-fluid">
+                    <h3 class="my-2">Dusk</h3>
+                    <p>Rs 3899</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="product text-center">
+                    <img src="intenso-02 (1).webp" alt="Intenso" class="img-fluid">
+                    <h3 class="my-2">Intenso</h3>
+                    <p>Rs 4199</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="product text-center">
+                    <img src="NEROLI5-01 (2).jpg" alt="Neroli" class="img-fluid">
+                    <h3 class="my-2">Neroli</h3>
+                    <p>Rs 4399</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="product text-center">
+                    <img src="Woods-012_medium.avif" alt="Woods" class="img-fluid">
+                    <h3 class="my-2">Woods</h3>
+                    <p>Rs 4399</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banner for HIM -->
+<!-- Banner for HIM with Integrated Background Image -->
+<!-- Banner for HIM with Right-Aligned Content -->
+<section class="hero banner-2 d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 text-end">
+                <div class="hero-content">
+                    <h2>FOR HIM</h2>
+                    <p>Unleash his charisma with our selection <br> of bold, unforgettable fragrances</p>
+                    <button class="btn btn-dark mt-3">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOR HIM Product Display Section -->
+<section class="product-display-section py-5 bg-light">
+    <div class="container">
+        <h2 class="category-heading text-center mb-4">FOR HIM</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="dusk-02-02.webp" class="card-img-top" alt="Dusk">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Dusk</h3>
+                        <p class="card-text">Rs 3899</p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="intenso-02 (1).webp" class="card-img-top" alt="Intenso">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Intenso</h3>
+                        <p class="card-text">Rs 4199</p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="NEROLI5-01 (2).jpg" class="card-img-top" alt="Neroli">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Neroli</h3>
+                        <p class="card-text">Rs 4399</p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Woods-012_medium.avif" class="card-img-top" alt="Woods">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Woods</h3>
+                        <p class="card-text">Rs 4399</p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Banner for HER -->
+
+<section class="hero banner-2 for-her">
+    <div class="container">
+        <div class="row justify-content-end align-items-center" style="height: 100vh;">
+            <div class="col-md-6 text-end text-white">
+                <div class="hero-content">
+                    <h2 class="text-dark">FOR HER</h2>
+                    <p class="text-dark">Each scent composing a melodious ode<br> to her femininity, strength, and allure</p>
+                    <button class="btn btn-light">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOR HER product -->
+<div class="container my-5"> <!-- Bootstrap container for responsiveness -->
+    <div class="row"> <!-- Bootstrap row for grid layout -->
+        <div class="col-md-3 mb-4"> <!-- Four products per row on medium and larger screens -->
+            <div class="card"> <!-- Bootstrap card for product display -->
+                <img src="MEDUSA.webp" class="card-img-top" alt="MEDUSA"> <!-- Card image -->
+                <div class="card-body text-center"> <!-- Center text inside card body -->
+                    <h5 class="card-title">MEDUSA</h5> <!-- Product title -->
+                    <p class="card-text">Rs 3899</p> <!-- Product price -->
+                    <button class="btn btn-dark">Add to Cart</button> <!-- Bootstrap button -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4"> <!-- Repeat for each product -->
+            <div class="card">
+                <img src="HERA.webp" class="card-img-top" alt="HERA">
+                <div class="card-body text-center">
+                    <h5 class="card-title">HERA</h5>
+                    <p class="card-text">Rs 4199</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="soulportrait-02.webp" class="card-img-top" alt="SOUL'S PORTRAIT">
+                <div class="card-body text-center">
+                    <h5 class="card-title">SOUL'S PORTRAIT</h5>
+                    <p class="card-text">Rs 4399</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="GODDESS.webp" class="card-img-top" alt="GODDESS">
+                <div class="card-body text-center">
+                    <h5 class="card-title">GODDESS</h5>
+                    <p class="card-text">Rs 4399</p>
+                    <button class="btn btn-dark">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container my-5 breathe-luxury"> <!-- Bootstrap container for spacing -->
+    <div class="row align-items-center"> <!-- Bootstrap row with vertical alignment -->
+        <div class="col-md-6"> <!-- Half-width for larger screens -->
+            <img src="breathe_luxury.webp" alt="breathe-luxury" class="img-fluid rounded"> <!-- Bootstrap classes for responsive image and rounded corners -->
+        </div>
+        <div class="col-md-6 text-left"> <!-- Half-width for larger screens with left-aligned text -->
+            <h1 class="display-4">BREATHE LUXURY</h1> <!-- Bootstrap display class for larger heading -->
+            <p class="lead">At "THE NOTE," our journey begins with a simple yet profound belief: Life is a symphony of moments, and each moment carries its unique note. We have made it our mission to capture these notes, bottle them, and present them to you in the form of exquisite fragrances.</p> <!-- Bootstrap lead class for emphasized text -->
+            <button class="btn btn-dark mt-3">Discover More</button> <!-- Bootstrap button -->
+        </div>
+    </div>
+</div>
+
+<div class="container text-center my-5 services"> <!-- Centered text for services section -->
+    <h1>WHEN YOU BUY ONLINE</h1>
+    <h3>OUR SERVICES</h3>
+</div>
+
+
+<div class="container my-5 icons"> <!-- Bootstrap container for spacing -->
+    <div class="row text-center"> <!-- Bootstrap row for icons -->
+        <div class="col-md-3 icon"> <!-- Each icon in a Bootstrap column -->
+            <img class='imgs img-fluid' src="customer-service.png" alt="Customer Service"> <!-- Bootstrap img-fluid for responsive images -->
+            <p>CUSTOMER SERVICE</p>
+            <p>For any question, contact</p>
+            <p>info@thenoteofficial.com</p>
+        </div>
+        <div class="col-md-3 icon">
+            <img class='imgs img-fluid' src="fast-delivery.png" alt="Delivery">
+            <p>Free Complimentary Delivery</p>
+        </div>
+        <div class="col-md-3 icon">
+            <img class='imgs img-fluid' src="sample.png" alt="Complimentary Samples">
+            <p>COMPLIMENTARY SAMPLES</p>
+        </div>
+        <div class="col-md-3 icon">
+            <img class='imgs img-fluid' src="secure.png" alt="Secure Payment">
+            <p>SECURE PAYMENT</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer bg-dark text-light  py-5"> <!-- Added text-light for light text color -->
+    <div class="container footer-container"> <!-- Bootstrap container for footer -->
+        <div class="row"> <!-- Bootstrap row for footer sections -->
+            <div class="col-md-3 footer-section"> <!-- Each footer section in a Bootstrap column -->
+                <address class='address'>
+                    <p><i class="fa fa-map-marker"></i> DHA Phase 6, Lahore, Pakistan</p>
+                    <p><i class="fa fa-phone"></i> +61411159544</p>
+                    <p><i class="fa fa-envelope"></i> info@thenoteofficial.com</p>
+                </address>
+                <ul class="social-links list-inline"> <!-- List inline for social links -->
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 footer-section">
+                <h2>MY ACCOUNT</h2>
+                <ul>
+                    <li><a href="#" class="text-light">CONTACT US</a></li>
+                    <li><a href="#" class="text-light">ORDER TRACKING</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 footer-section">
+                <h2>INFORMATION</h2>
+                <ul>
+                    <li><a href="#" class="text-light">ABOUT US</a></li>
+                    <li><a href="#" class="text-light">BLOGS</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 footer-section">
+                <h2>POLICIES</h2>
+                <ul>
+                    <li><a href="#" class="text-light">DELIVERY & ORDERS</a></li>
+                    <li><a href="#" class="text-light">EXCHANGE & RETURNS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<footer class="site-footer bg-light text-dark"> <!-- Bootstrap classes for dark background and light text -->
+    <div class="container"> <!-- Bootstrap container -->
+        <div class="row align-items-center"> <!-- Bootstrap row with vertical alignment -->
+            <div class="col-md-6 footer-info"> <!-- Bootstrap column for footer info -->
+                <p>&copy; 2024 The Note. All Rights Reserved.</p>
+                <div class="language-options">
+                    <select id="country-select" class="form-select"> <!-- Bootstrap select styling -->
+                        <option value="Pakistan">Pakistan</option>
+                    </select>
+                    <select id="language-select" class="form-select"> <!-- Bootstrap select styling -->
+                        <option value="English">English</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 payment-logos text-end"> <!-- Bootstrap column for payment logos -->
+                <img src="visa.jfif" alt="Visa" class="payment-logo me-2"> <!-- Bootstrap margin class -->
+                <img src="master.jfif" alt="Mastercard" class="payment-logo me-2"> <!-- Bootstrap margin class -->
+                <img src="union.jfif" alt="American Express" class="payment-logo"> <!-- Bootstrap margin class -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <!-- Contact Us Section -->
+    <section id="contactss" class="py-5 contact-section">
+        <div class="container">
+            <h5 class="text-center text-danger">Contact Us</h5>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Enter phone number">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter message">
+                        </div>
+                        <button type="submit" class="btn btn-danger">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
