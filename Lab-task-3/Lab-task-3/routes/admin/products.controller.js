@@ -63,7 +63,7 @@ router.post(
 // Route to display products with pagination
 router.get("/admin/products/:page?", async (req, res) => {
   let page = req.params.page ? Number(req.params.page) : 1;
-  let pageSize = 5; // Number of products per page
+  let pageSize = 5; //// prducts per page
   let totalRecords = await Product.countDocuments();
   let totalPages = Math.ceil(totalRecords / pageSize);
 

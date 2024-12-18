@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Processing Panel</title>
+    <!-- Bootstrap CSS (from CDN) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Default CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .table th,
+        .table td {
+            text-align: center;
+        }
+
+        .btn {
+            margin: 5px;
+        }
+
+        .processing {
+            background-color: #ffbb33;
+            color: white;
+        }
+
+        .shipped {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .cancelled {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .order-actions {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Order Processing Panel</h2>
+
+        <!-- Order Table -->
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Total Amount</th>
+                    <th>Order Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through orders array and display each order -->
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= order.orderId %></td>
+                        <td><%= order.customerInfo.name %></td>
+                        <td><%= order.customerInfo.street %>, <%= order.customerInfo.city %>, <%= order.customerInfo.postalCode %></td>
+                        <td><%= order.totalAmount %></td>
+                        <td><%= order.orderDate.toLocaleString() %></td>
+                        <td>
+                            <!-- Show order status -->
+                            <span class="badge 
+                                <%= order.status === 'Processing' ? 'processing' : '' %>
+                                <%= order.status === 'Shipped' ? 'shipped' : '' %>
+                                <%= order.status === 'Cancelled' ? 'cancelled' : '' %>">
+                                <%= order.status %>
+                            </span>
+                        </td>
+                        <td class="order-actions">
+                            <!-- Action buttons for status updates -->
+                            <form action="/admin/update-order" method="POST">
+                                <input type="hidden" name="orderId" value="<%= order.orderId %>">
+                                <button type="submit" name="status" value="Processing" class="btn processing">Processing</button>
+                                <button type="submit" name="status" value="Shipped" class="btn shipped">Shipped</button>
+                                <button type="submit" name="status" value="Cancelled" class="btn cancelled">Cancel</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (from CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

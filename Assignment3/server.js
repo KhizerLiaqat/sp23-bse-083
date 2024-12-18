@@ -13,8 +13,6 @@ server.get('/portfolio', (req, res) => {
     res.render("portfolio");
 })
 
-
-
 server.listen(5000, () => {
     console.log("server listening on port 5000");
 

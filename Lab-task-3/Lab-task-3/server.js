@@ -54,16 +54,16 @@ server.get("/", async (req, res) => {
 
 // Admin route for creating products (although it's already in products.controller.js, ensure it's not redundant)
 server.get("/admin/products/create", (req, res) => {
-  res.render("admin/productform", {
+  res.render("admin/productform", { 
     layout: "adminlayout",
-    pageTitle: "Create New Product"
+    pageTitle: "Create New Product" 
   });
 });
 
 server.get("/admin/categories/create", (req, res) => {
-  res.render("admin/category-form", {
+  res.render("admin/category-form", { 
     layout: "adminlayout",
-    pageTitle: "Create New Product"
+    pageTitle: "Create New Product" 
   });
 });
 

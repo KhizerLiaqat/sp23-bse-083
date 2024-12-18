@@ -1,0 +1,85 @@
+<!-- Shopping Cart -->
+<div id="cart">
+    <!-- Cart items will be displayed here -->
+    <button id="checkout-btn">Checkout</button>
+  </div>
+  
+  <!-- Checkout Form Modal -->
+  <div id="checkout-form" style="display:none;">
+    <form id="checkout-form">
+      <h3>Delivery Address</h3>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="text" name="street" placeholder="Street Address" required><br>
+      <input type="text" name="city" placeholder="City" required><br>
+      <input type="text" name="postalCode" placeholder="Postal Code" required><br>
+  
+      <!-- You need to send the cart items as part of the form -->
+      <input type="hidden" name="items" value="<%= JSON.stringify(cartItems) %>">
+  
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById('checkout-btn').onclick = function() {
+      document.getElementById('checkout-form').style.display = 'block';
+    };
+  
+    document.getElementById('checkout-form').onsubmit = async function(e) {
+      e.preventDefault();
+  
+      const formData = new FormData(e.target);
+      const formObj = {};
+      formData.forEach((value, key) => {
+        formObj[key] = value;
+      });
+  
+      // Send the order data to backend
+      const response = await fetch('/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formObj)
+      });
+  
+      const data = await response.json();
+      if (data.message === 'Order placed successfully') {
+        alert('Order placed successfully!');
+        // Optionally, redirect to the order confirmation page
+        window.location.href = `/order/${data.orderId}`;
+      } else {
+        alert(data.message);
+      }
+    };
+  </script>
+  
+
+  <!-- Shopping Cart Page -->
+<form action="/checkout" method="POST">
+  <div class="cart-items">
+    <!-- Loop through cart items and display them here -->
+    <ul>
+      <% cartItems.forEach(item => { %>
+        <li><%= item.productName %> - <%= item.quantity %> x <%= item.price %></li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <h3>Enter your delivery details</h3>
+  <label for="name">Name:</label>
+  <input type="text" name="name" required>
+  
+  <label for="street">Street:</label>
+  <input type="text" name="street" required>
+  
+  <label for="city">City:</label>
+  <input type="text" name="city" required>
+  
+  <label for="postalCode">Postal Code:</label>
+  <input type="text" name="postalCode" required>
+  
+  <h3>Your Order Total: <%= totalAmount %></h3>
+  
+  <button type="submit">Checkout</button>
+</form>
