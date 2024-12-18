@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Order Schema
+
 const orderSchema = new mongoose.Schema({
     orderId: { type: String, required: true, unique: true },
     customerInfo: {
@@ -20,6 +20,5 @@ const orderSchema = new mongoose.Schema({
     orderDate: { type: Date, default: Date.now }
 });
 
-// Create and export the model
 const Order = mongoose.model('Order', orderSchema);
 module.exports = Order;
